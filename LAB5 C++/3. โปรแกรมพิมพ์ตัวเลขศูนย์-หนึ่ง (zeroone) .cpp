@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 	int n,i,k;
 	cin >> n;
-	  for (i=1;i<=n;i++){
+	  for (k=1;i<=n;i++){
 	  	
 	  	if(i%2==1){
 	  		cout <<0<<"";
@@ -14,3 +14,4 @@ int main() {
 	  }
 return 0;
 }
+

@@ -4,8 +4,8 @@ using namespace std;
 int main() {
     int n, i, maxVal, minVal, x;
     i = 0;
-    maxVal = -1;
-    minVal = 1;
+    maxVal = -99999;
+    minVal = 99999;
 
     while (i < 10) { 
         cin >> x;
@@ -34,4 +34,5 @@ int main() {
 
     return 0;
 }
+
 

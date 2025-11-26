@@ -2,31 +2,24 @@
 using namespace std;
 
 int main() {
-    int n, i, maxVal, minVal, x;
-    i = 0;
-    maxVal = -99999;
-    minVal = 99999;
+    int num;
+    int maxVal = -1;
+    int minVal = 21;  // ช่วง 10–20
+    int count = 0;
 
-    while (i < 10) { 
-        cin >> x;
-        if (x == 0) {  
-            break;      
-        }
-        while (x < 10 || x > 20) { 
-            cin >> x;
-            if (x == 0) {
-                break;
-            }
-        }
-        if (x == 0) {
-            break;
-        }
-        if (x > maxVal) maxVal = x;
-        if (x < minVal) minVal = x;
-        i++;
+    for (int i = 0; i < 10; ) {
+        cin >> num;
+        if (num == 0) break;
+        if (num < 10 || num > 20) continue;
+
+        if (num > maxVal) maxVal = num;
+        if (num < minVal) minVal = num;
+
+        count++;
+        i++; // นับรอบเฉพาะตอนค่าถูกช่วง
     }
 
-    if (i == 0) {
+    if (count == 0) {
         cout << 0;
     } else {
         cout << (maxVal - minVal);
@@ -34,5 +27,3 @@ int main() {
 
     return 0;
 }
-
-

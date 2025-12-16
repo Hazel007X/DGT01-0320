@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num[6];       	
+    int even[6];      
+    int odd[6];      
+    int i = 0, j = 0, k = 0; 
+    int rem;          
+
+    for (i = 0; i < 6; i++) {
+        cin >> num[i];
+    }
+
+    for (i = 0; i < 6; i++) {
+        rem = num[i] % 2;
+        if (rem == 0) {
+            even[j] = num[i];
+            j++;
+        } else {
+            odd[k] = num[i];
+            k++;
+        }
+    }
+
+    cout << "Even = ";
+    for (int x = 0; x < j; x++) {
+        cout << even[x] << " ";
+    }
+    cout << endl;
+
+    cout << "Odd = ";
+    for (int y = 0; y < k; y++) {
+        cout << odd[y] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}

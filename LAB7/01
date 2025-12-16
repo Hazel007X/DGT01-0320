@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;   
+
+    int num[100];
+    double sum = 0;
+    int max_val = 0;
+    int min_val = 1000;
+
+    for (int i = 0; i < n; i++) {
+        cin >> num[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        sum += num[i];
+        if (num[i] > max_val) max_val = num[i];
+        if (num[i] < min_val) min_val = num[i];
+    }
+
+    cout << "Avg = " << sum / n << endl;
+    cout << "Max = " << max_val << endl;
+    cout << "Min = " << min_val << endl;
+
+    return 0;
+}

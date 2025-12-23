@@ -10,15 +10,15 @@ int main() {
         }
     }
 
-    int [5] = {0};
+    int sumcolumns[5] = {0};
     for(int j=0; j<5; j++) {
         for(int i=0; i<2; i++) {
-            [j] += scores[i][j];
+            sumcolumns[j] += scores[i][j];
         }
     }
 
     for(int j=0; j<5; j++) {
-        cout << [j] << " ";
+        cout << sumcolumns[j] << " ";
     }
 
     return 0;

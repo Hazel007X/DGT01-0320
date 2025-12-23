@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+
+    int matrix1[5][5], matrix2[5][5];
+
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<m; j++) {
+            cin >> matrix1[i][j];
+        }
+    }
+
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<m; j++) {
+            cin >> matrix2[i][j];
+        }
+    }
+
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<m; j++) {
+            double avg = (matrix1[i][j] + matrix2[i][j]) / 2.0;
+            if (avg == (int)avg) {
+                cout << (int)avg << " ";
+            } else {
+                cout << avg << " ";
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
